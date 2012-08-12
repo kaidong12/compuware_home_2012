@@ -1,0 +1,36 @@
+<suite name="CMS_Top_Level_TestSuite" parallel="true" verbose="10">
+
+<!-- Browser and Execution Settings -->
+	<parameter name="BrowserType" value="FIREFOX"/>
+	<parameter name="baseUrl" value="http://www.google.com"/>
+	<parameter name="commonTestSuite_XMLPath" value="..//CMS_Project/src/com/covisint/cms/Common_TestSuite.xml"/>
+
+<!-- Data File Locations -->
+	<parameter name="Common_TestData" value="..//CMS_Project/TestData/Common_TestData.csv"/>
+	<parameter name="CMS_GENERIC_TestData" value="..//CMS_Project/src/com/covisint/cms/generic/CMS_GENERIC_TestData.csv"/>
+	<parameter name="CMS_RP_TestData" value="..//CMS_Project/src/com/covisint/cms/rp/CMS_RP_TestData.csv"/>
+
+<!-- Locator Files Locations -->
+	<parameter name="Common_Locators" value="..//CMS_Project/src/com/covisint/cms/Common_Locators.txt"/>
+	<parameter name="CMS_GENERIC_Locators" value="..//CMS_Project/src/com/covisint/cms/generic/CMS_GENERIC_Locators.txt"/>
+	<parameter name="CMS_RP_Locators" value="..//CMS_Project/src/com/covisint/cms/rp/CMS_RP_Locators.txt"/>
+
+<!-- Test -->
+	<test name="CMS_Test" preserve-order="true">
+		<classes>
+			<class name="com.covisint.cms.generic.CMS_GENERIC_Test">
+				<methods>
+					<include name="testCMS_3_Login_as_Administrator"/>
+					<include name="Component_Unit_Test"/>
+				</methods>
+			</class>
+			<class name="com.covisint.cms.rp.CMS_RP_Test">
+				<methods>
+					<include name="testCMS_3_Login_as_Administrator"/>
+					<include name="Component_Unit_Test"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>

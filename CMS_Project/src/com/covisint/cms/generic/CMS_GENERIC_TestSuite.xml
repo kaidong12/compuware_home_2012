@@ -1,0 +1,86 @@
+<suite name="CMS_GENERIC_Test" parallel="false" verbose="10">
+
+<!-- Browser and Execution Settings -->
+	<parameter name="BrowserType" value="FIREFOX"/>
+	<parameter name="baseUrl" value="http://www.google.com"/>
+	<parameter name="commonTestSuite_XMLPath" value="..//CMS_Project/src/com/covisint/cms/Common_TestSuite.xml"/>
+
+<!-- Data File Locations -->
+	<parameter name="Common_TestData" value="..//CMS_Project/TestData/Common_TestData.csv"/>
+	<parameter name="CMS_GENERIC_TestData" value="..//CMS_Project/src/com/covisint/cms/generic/CMS_GENERIC_TestData.csv"/>
+
+<!-- Locator Files Locations -->
+	<parameter name="CMS_GENERIC_Locators" value="..//CMS_Project/src/com/covisint/cms/generic/CMS_GENERIC_Locators.txt"/>
+	<parameter name="Common_Locators" value="..//CMS_Project/src/com/covisint/cms/Common_Locators.txt"/>
+
+<!-- Test -->
+	<test name="CMS_GENERIC_Test" preserve-order="true">
+		<classes>
+			<class name="com.covisint.cms.generic.CMS_GENERIC_Test">
+				<methods>
+<!--
+
+					<include name="testCMS_2_Login_as_Site_Administrator"/>
+					<include name="testCMS_3_Login_as_Site_Owner"/>
+					<include name="testCMS_4_Login_as_Site_Member"/>
+					<include name="testCMS_5_Login_as_Normal_User"/>
+
+					<include name="testCMS_1_Login_as_Portal_Administrator"/>
+					<include name="testCMS_6_Add_Default_Blank_Site"/>
+					<include name="testCMS_98_Add_Default_Site_Template"/>
+					<include name="testCMS_101_Add_Default_Page_Template"/>
+					<include name="testCMS_72_Edit_Details_of_Site"/>
+					<include name="testCMS_74_Edit_Site_to_Remote_live"/>
+					<include name="testCMS_14_to_18_Add_Page_Control_Panel"/>
+					<include name="testCMS_94_Add_Blank_Page_Menu_Bar"/>
+					<include name="testCMS_7_to_9_Add_Page_Menu_Bar"/>
+					<include name="testCMS_11_to_13_Add_Page_Control_Panel"/>
+					<include name="testCMS_143_Edit_HTML_Title_of_Page"/>
+					<include name="testCMS_21_Add_Child_Page"/>
+					<include name="testCMS_22_Add_Private_Page"/>
+					<include name="testCMS_23_Move_Page"/>
+						<include name="testCMS_25_Export_Pages"/>
+						<include name="testCMS_26_Import_Pages"/>
+
+					<include name="testCMS_10_Delete_Site_Page_Menu_Bar"/>
+					<include name="testCMS_107_Delete_Site_Page_via_Site_Pages_live"/>
+					<include name="testCMS_108_Delete_Site_Page_via_Manager_Page_live"/>
+					<include name="testCMS_109_Delete_Site_Page_via_Manager_Site_Pages_live"/>
+					<include name="testCMS_27_Delete_Site_Page_via_Site_Pages_Staging"/>
+					<include name="testCMS_91_Delete_Site_Page_via_Manager_Page_Staging"/>
+					<include name="testCMS_92_Delete_Site_Page_via_Manager_Site_Pages_Staging"/>
+
+					<include name="testCMS_87_Add_Folder"/>
+					<include name="testCMS_47_Add_Subfolder_via_Menu_Bar"/>
+					<include name="testCMS_56_Add_Basic_Document_via_Control_Panel"/>
+					<include name="testCMS_83_Add_Vocabulary"/>
+					<include name="testCMS_80_Add_Category"/>
+					<include name="testCMS_97_Check_Out_Document"/>
+					<include name="testCMS_99_Check_In_Document"/>
+					<include name="testCMS_102_Cancel_Check_Out_Document"/>
+					<include name="testCMS_89_Categorize_Document"/>
+					<include name="testCMS_62_Add_Web_Content_via_Control_Panel"/>
+					<include name="testCMS_90_Add_Web_Content_with_Image_via_Control_Panel"/>
+					<include name="testCMS_144_Add_Draft_Web_Content_via_Control_Panel"/>
+					<include name="testCMS_82_Add_Tag_via_Tags_Page"/>
+					<include name="testCMS_88_Categorize_Web_Content"/>
+					<include name="testCMS_145_Add_Search_Portlet"/>
+
+					<include name="testCMS_61_Delete_Document"/>
+					<include name="testCMS_96_Delete_Tag_via_Tags_Page"/>
+
+					<include name="Component_Unit_Test"/>
+					<include name="testCMS_339_Delete_Site"/>
+
+-->
+
+					<include name="testCMS_1_Login_as_Portal_Administrator"/>
+					<include name="testCMS_62_Add_Web_Content_via_Control_Panel"/>
+					<include name="testCMS_144_Add_Draft_Web_Content_via_Control_Panel"/>
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>

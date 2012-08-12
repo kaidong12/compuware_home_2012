@@ -1,0 +1,416 @@
+*****************************************************************************
+Locators Format:
+<project name>.<module>.<portlet>.<section>.<control type>_<control name> = <locator>
+
+where
+<project name>: NGDOE
+<module>: Component/Module name the test is being created for - i.e: PAM, IDM
+<porlet>: Portlet name the test is being created for - i.e. login
+<section>: Section within the portlet.  This is optional, 
+		   depends if there is a section within the portlet
+<control type>: Editbox, Checkbox, Label, Link, Combobox, etc
+<control name>: Control name in the application - i.e. SignOn
+<locator>: This is the locator recognized by Selenium IDE.  The locator
+           is a identifier of the application object which Selenium 
+           recognizes during automation playback
+*****************************************************************************
+
+
+************************************************************
+************************* CONTENT **************************
+************************************************************
+
+****** CMS Core Portal Sign In Page
+****** CMS Core Portal SSO Sign In Page
+****** CMS Core Portal Welcome
+****** CMS Core Portal Publish Dialog
+****** CMS Core Portal View Page Page
+****************************************************View Page
+
+****** CMS Core Portal Manage Page Dialog
+****** CMS Core Portal GoTo Menu
+****** CMS Core Portal Add Menu on top menu bar
+****** CMS Core Portal Add Site Menu
+****** CMS Core Portal Add DocAndLib Menu
+****** CMS Core Portal Control Panel Menu
+*******************************************************Menus
+
+****** CMS Core Portal Sites Page
+****** CMS Core Portal Site Templates Page
+****** CMS Core Portal Page Templates Page
+****** CMS Core Portal Site Pages Page
+****** CMS Core Portal Web Content Page
+****** CMS Core Portal Documents and Media Page
+****** CMS Core Portal Tags Page
+****** CMS Core Portal Categories Page
+***********************************************Control Panel
+
+****** CMS Core Portal Data Table
+****** CMS Core Portal Interactive Messages
+****** Component Unit Test
+*******************************************************Other
+
+************************************************************
+************************* CONTENT **************************
+************************************************************
+
+
+
+************************************************************
+*** CMS Core Portal Sign In Page ***
+************************************************************
+CMS.Login.TextBox_UserName = //input[contains(@id,'_login')]
+CMS.Login.TextBox_PassWord = //input[contains(@id,'_password')]
+CMS.Login.Btn_SignOn = //input[@value='Sign In']
+
+
+
+************************************************************
+*** CMS Core Portal SSO Sign In Page ***
+************************************************************
+SSO.Login.TextBox_UserName = //input[contains(@id,'user')]
+SSO.Login.TextBox_PassWord = //input[contains(@id,'password')]
+SSO.Login.Btn_SignOn = //button[text()='Sign On']
+
+
+
+************************************************************
+*** CMS Core Portal Welcome ***
+************************************************************
+CMS.Welcome.TopMenuBar.dockbar = //div[@id='dockbar']
+CMS.Welcome.TopMenuBar.menu-button_Add = //li[contains(@id,'_addContent')]/a[span[contains(text(),'Add')]]
+CMS.Welcome.TopMenuBar.menu-button_Manage = //li[contains(@id,'_manageContent')]/a/span[contains(text(),'Manage')]
+CMS.Welcome.TopMenuBar.toggle_Edit = //li[contains(@id,'_toggleControls')]/a[contains(text(),'Edit Controls')]
+CMS.Welcome.TopMenuBar.menu-button_GoTo = //li[contains(@id,'_mySites')]/a/span[contains(text(),'Go to')]
+CMS.Welcome.TopMenuBar.avatar_UserAvatar = //li[contains(@id,'_userAvatar')]
+CMS.Welcome.TopMenuBar.link_FullName = //li[contains(@id,'_userAvatar')]/span/a[contains(text(),'%TEXT%')]
+CMS.Welcome.TopMenuBar.link_SignOut = //li[contains(@id,'_userAvatar')]/span/span/a[contains(text(),'Sign Out')]
+
+CMS.Welcome.TopMenuBar.textbox_PortletName = //input[@id='layout_configuration_content' and @type='text']
+CMS.Welcome.TopMenuBar.PortletItem_Add = //div[@class='portal-add-content']//div/p[starts-with(text(),'%TEXT%')]/a[text()='Add']
+
+CMS.ViewPage.SecondTopMenuBar.CustomizationBar = //div[@class='page-customization-bar']
+
+CMS.ViewPage.SecondTopMenuBar.StagingBar = //div[@class='staging-bar']
+CMS.ViewPage.SecondTopMenuBar.RemoteLive = //span[@class='aui-tab-label']/a[@class='taglib-icon' and contains(.,'Go to Remote Live')]
+CMS.ViewPage.SecondTopMenuBar.Staging = //span[@class='aui-tab-label' and contains(.,'Staging')]//a[@class='nobr']
+CMS.ViewPage.SecondTopMenuBar.Publish = //a[@role='menuitem' and contains(.,'%TEXT%')]
+
+
+
+************************************************************
+*** CMS Core Portal Publish Dialog ***
+************************************************************
+
+
+
+
+************************************************************
+*** CMS Core Portal View Page Page ***
+************************************************************
+CMS.ViewPage.NavigationBar.textbox_PageName = //input[starts-with(@id,'aui_')]
+CMS.ViewPage.NavigationBar.radio-button_template = //a[contains(.,'%TEXT%')]/input[@type='radio']
+CMS.ViewPage.NavigationBar.button_options = //button[@id='options']
+CMS.ViewPage.NavigationBar.button_save = //button[@id='save']
+CMS.ViewPage.NavigationBar.text_PageName = //nav[@id='navigation']/ul/li/a[contains(.,'%TEXT%')]
+#CMS.ViewPage.NavigationBar.button_delete = //nav[@id='navigation']/ul/li/span[preceding-sibling::a[contains(.,'%TEXT%')]]
+CMS.ViewPage.NavigationBar.button_delete = //span[@class='delete-tab' and text()='X']
+CMS.ViewPage.NavigationBar.tab_PageName = //nav[@id='navigation']/ul/li[a[contains(.,'%TEXT%')]]
+
+CMS.ViewPage.Portlets.text_PortletTitle = //section[@class='portlet']/header/h1/span[text()='%TEXT%']
+
+
+
+************************************************************
+*** CMS Core Portal Manage Page Dialog ***
+************************************************************
+CMS.ViewPage.ManagePageDialog.pagetitle_ManagePage = //span[@class='aui-panel-hd-text' and text()='Manage Page']
+CMS.ViewPage.ManagePageDialog.pagetitle_ManageSitePages = //span[@class='aui-panel-hd-text' and text()='Manage Site Pages']
+CMS.ViewPage.ManagePageDialog.button_Close = //button[@title='Close dialog']
+CMS.ViewPage.ManagePageDialog.iframe_manageContentDialog = //iframe[@name='manageContentDialog']
+CMS.ViewPage.ManagePageDialog.text_PageName = //ul[@class='aui-tree-container']/li/div/div/a[contains(text(),'%TEXT%')]
+CMS.ViewPage.ManagePageDialog.button_Delete = //button/span[text()='Delete']
+
+
+
+************************************************************
+*** CMS Core Portal GoTo Menu ***
+************************************************************
+CMS.Welcome.GoToMenu.menu-item_ControlPanel = //span[contains(text(),'Control Panel')]
+
+
+
+************************************************************
+*** CMS Core Portal Add Menu on top menu bar ***
+************************************************************
+CMS.Welcome.AddMenu.menu-item_Page_click = //li[@class='first add-page aui-menu-item']/a[contains(.,'Page')]
+CMS.Welcome.AddMenu.menu-item_Page_nono = //div[@class='aui-menu-content']/ul/li[@class='first add-page']/a[contains(.,'Page')]
+CMS.Welcome.AddMenu.menu-item_Page = //li[contains(@class,'first add-page')]/a[contains(.,'Page')]
+
+
+
+************************************************************
+*** CMS Core Portal Add Site Menu ***
+************************************************************
+CMS.ControlPanel.AddSite.menu-link_BlankSite = //a[contains(.,'Blank Site')]
+
+
+
+************************************************************
+*** CMS Core Portal Add DocAndLib Menu ***
+************************************************************
+CMS.DocAndLib.AddMenu.menuitem_Folder = //a[@role='menuitem' and contains(.,'Folder')]
+CMS.DocAndLib.AddMenu.menuitem_Subfolder = //a[@role='menuitem' and contains(.,'Subfolder')]
+CMS.DocAndLib.AddMenu.menuitem_BasicDocument = //a[@role='menuitem' and contains(.,'Basic Document')]
+
+
+
+************************************************************
+*** CMS Core Portal Control Panel Menu ***
+************************************************************
+CMS.ControlPanel.LeftSideMenu.panel-title_SiteName = //li[@class='lfr-trigger']/strong/a/span[contains(text(),'%TEXT%')]
+
+CMS.ControlPanel.RightSideMenu.menu-button_Save = //input[@type='submit' and @value='Save']
+
+
+
+************************************************************
+*** CMS Core Portal Sites Page ***
+************************************************************
+CMS.ControlPanel.SitePage.pagetitle = //h1[@id='cpPortletTitle']/span[contains(text(),'%TEXT%')]
+CMS.ControlPanel.SitePage.sectiontitle = //h1[@class='header-title']/span[contains(text(),'%TEXT%')]
+
+CMS.ControlPanel.SitePage.menu-button_Add = //ul[@id='kldx_menu']/li/strong/a/span[text()='Add']
+CMS.ControlPanel.SitePage.sectiontitle_Back = //span[@class='header-back-to']/a[contains(text(),'Back')]
+CMS.ControlPanel.SitePage.textbox_NewSite = //input[contains(@id,'_name')]
+CMS.ControlPanel.SitePage.textarea_Description = //textarea[contains(@id,'_description')]
+CMS.ControlPanel.SitePage.text_SiteID = //div[@class='aui-field-wrapper-content' and contains(.,'Site ID')]
+
+CMS.ControlPanel.SitePage.radio-button_RemoteLive = //label[contains(.,'Remote Live')]
+CMS.ControlPanel.SitePage.textbox_RemoteIP = //input[contains(@id,'_remoteAddress')]
+CMS.ControlPanel.SitePage.textbox_Port = //input[contains(@id,'_remotePort')]
+CMS.ControlPanel.SitePage.textbox_SiteID = //input[contains(@id,'_remoteGroupId')]
+
+CMS.ControlPanel.SitePage.menu-button_Actions = //tr[td/a[contains(.,'%TEXT%')]]//a[@class='nobr' and contains(.,'Actions')]
+CMS.ControlPanel.SitePage.menu-item_Delete = //a[@role='menuitem' and contains(.,'Delete')]
+
+
+
+************************************************************
+*** CMS Core Portal Site Templates Page ***
+************************************************************
+CMS.ControlPanel.SiteTemplate.link_Add = //div[@class='lfr-portlet-toolbar']/span/a[contains(text(),'Add')]
+CMS.ControlPanel.SiteTemplate.sectiontitle_Back = //span[@class='header-back-to']/a[contains(text(),'Back')]
+CMS.ControlPanel.SiteTemplate.textbox_NewTemplate = //input[contains(@id,'_name_en_US')]
+CMS.ControlPanel.SiteTemplate.textarea_Description = //textarea[contains(@id,'_description')]
+CMS.ControlPanel.SiteTemplate.button_Save = //input[@value='Save']
+
+
+
+************************************************************
+*** CMS Core Portal Page Templates Page ***
+************************************************************
+CMS.ControlPanel.PageTemplate.link_Add = //div[@class='lfr-portlet-toolbar']/span/a[contains(text(),'Add')]
+CMS.ControlPanel.PageTemplate.textbox_NewTemplate = //input[contains(@id,'_name_en_US')]
+CMS.ControlPanel.PageTemplate.textarea_Description = //textarea[contains(@id,'_description')]
+CMS.ControlPanel.PageTemplate.button_Save = //input[@value='Save']
+
+
+
+************************************************************
+*** CMS Core Portal Site Pages Page ***
+************************************************************
+CMS.ControlPanel.SitePages.button_AddPage = //button[contains(.,'Add Page')]
+CMS.ControlPanel.SitePages.button_AddChildPage = //button[contains(.,'Add Child Page')]
+CMS.ControlPanel.SitePages.button_rightArrow = //button[@title='Move selected items from Public Pages to Private Pages.']
+CMS.ControlPanel.SitePages.button_leftArrow = //button[@title='Move selected items from Private Pages to Public Pages.']
+CMS.ControlPanel.SitePages.button_Save = //input[@value='Save']
+CMS.ControlPanel.SitePages.button_ExportPage = //button[contains(.,'Export')]
+CMS.ControlPanel.SitePages.button_ImportPage = //button[contains(.,'Import')]
+CMS.ControlPanel.SitePages.button_Delete = //button[contains(.,'Delete')]
+CMS.ControlPanel.SitePages.button_Permissions = //button[contains(.,'Permissions')]
+
+
+CMS.ControlPanel.SitePages.text_PageName = //div[contains(@id,'_layoutsTreeOutput')]//a[text()='%TEXT%']
+CMS.ControlPanel.SitePages.text_ChildPageName = //div/a[text()='%TEXT%']
+CMS.ControlPanel.SitePages.textbox_HTMLTitle = //input[contains(@id,'_title_en_US')]
+CMS.ControlPanel.SitePages.icon_treeNode = //div/div[@class='aui-tree-hitarea'][following-sibling::div/a[text()='%TEXT%']]
+CMS.ControlPanel.SitePages.tabtitle_Private = //span[@class='aui-tab-content']/a[contains(text(),'Private Pages')]
+CMS.ControlPanel.SitePages.tabtitle_Move = //span[@class='aui-tab-content']/a[contains(text(),'Move Pages')]
+CMS.ControlPanel.SitePages.select_publicpage = //select[contains(@id,'_currentPublicColumns')]/option[contains(text(),'%TEXT%')]
+CMS.ControlPanel.SitePages.select_privatepage = //select[contains(@id,'_currentPrivateColumns')]/option[contains(text(),'%TEXT%')]
+
+CMS.ControlPanel.AddPageDialog.title_AddPage = //div[@role='dialog']/div/div/span[text()='%TEXT%']
+#CMS.ControlPanel.AddPageDialog.title_AddPage = //div[@role='dialog']/div/div/span[text()='Add Page']
+#CMS.ControlPanel.AddPageDialog.title_AddChildPage = //div[@role='dialog']/div/div/span[text()='Add Child Page']
+CMS.ControlPanel.AddPageDialog.textbox_PageName = //input[contains(@id,'_name_en_US')]
+CMS.ControlPanel.AddPageDialog.select_Template = //select[contains(@id,'_layoutPrototypeId')]
+CMS.ControlPanel.AddPageDialog.select_Type = //select[contains(@id,'_addLayoutType')]
+CMS.ControlPanel.AddPageDialog.button_Add = //input[@value='Add Page']
+
+CMS.ControlPanel.ExportDialog.title_Export = //div[@role='dialog']/div/div/span[text()='Export']
+CMS.ControlPanel.ExportDialog.textbox_PackageName = //input[contains(@id,'_name_en_US')]
+CMS.ControlPanel.ExportDialog.button_Export = //input[@value='Export']
+CMS.ControlPanel.ExportDialog.button_Close = //button[@id='closethick' and @title='Close dialog']
+CMS.ControlPanel.ImportDialog.title_Import = //div[@role='dialog']/div/div/span[text()='Import']
+CMS.ControlPanel.ImportDialog.textbox_PackageName = //input[contains(@id,'_importFileName')]
+CMS.ControlPanel.ImportDialog.button_Import = //input[@value='Import']
+
+CMS.ControlPanel.PermissionsDialog.text_Title = //div[@role='tablist']/div/span[text()='Permissions']
+CMS.ControlPanel.PermissionsDialog.button_Close = //div[@role='tablist']/div/span//button[@ id='closethick' and @title='Close dialog']
+CMS.ControlPanel.PermissionsDialog.button_Save = //div[contains(@class,'aui-button-holder')]//input[@value='Save']
+CMS.ControlPanel.PermissionsDialog.button_Cancle = //div[contains(@class,'aui-button-holder')]//input[@value='Cancel']
+
+
+
+************************************************************
+*** CMS Core Portal Web Content Page ***
+************************************************************
+CMS.ControlPanel.WebContent.tab-label_WebContent = //span[@class='aui-tab-content']/a[contains(.,'Web Content')]
+CMS.ControlPanel.WebContent.tab-label_Structures = //span[@class='aui-tab-content']/a[contains(.,'Structures')]
+CMS.ControlPanel.WebContent.tab-label_Structures = //span[@class='aui-tab-content']/a[contains(.,'Structures')]
+CMS.ControlPanel.WebContent.tab-label_Templates = //span[@class='aui-tab-content']/a[contains(.,'Templates')]
+CMS.ControlPanel.WebContent.tab-label_Feeds = //span[@class='aui-tab-content']/a[contains(.,'Feeds')]
+CMS.ControlPanel.WebContent.tab-label_Recent = //span[@class='aui-tab-content']/a[contains(.,'Recent')]
+
+CMS.ControlPanel.WebContent.button_Add = //input[@type='button' and @value='Add']
+CMS.ControlPanel.WebContent.menu-button_Add = //div[@class='add-article-selector']//a[@class='nobr' and contains(.,'Add')]
+CMS.ControlPanel.WebContent.button_Permissions = //input[@type='button' and @value='Permissions']
+CMS.ControlPanel.WebContent.menuitem_Basic = //div[@class='lfr-component lfr-menu-list']//a[contains(.,'Basic Web Content')]
+
+CMS.ControlPanel.WebContent.textbox_Title = //input[contains(@id,'_title_en_US')]
+CMS.ControlPanel.WebContent.frame_Content = //iframe[contains(@title,'Rich text editor')]
+CMS.ControlPanel.WebContent.body_Content = //iframe[contains(@title,'Rich text editor')]/html/body
+CMS.ControlPanel.WebContent.textarea_Content = //textarea[contains(@id,'_structure_el_TextAreaField_content')]
+CMS.ControlPanel.WebContent.checkbox_Searchable = //input[contains(@id,'_indexableCheckbox')]
+
+CMS.ControlPanel.WebContent.button_Source = //a[@role='button' and @title='Source']
+CMS.ControlPanel.WebContent.textarea_Content = //textarea[@class='cke_source cke_enable_context_menu' and @role='textbox']
+CMS.ControlPanel.WebContent.button_Image = //a[@role='button' and @title='Image']
+CMS.ControlPanel.WebContent.button_OK = //a[@role='button' and @title='OK']
+CMS.ControlPanel.WebContent.button_BrowseServer = //div[@class='cke_dialog_ui_vbox']//a[@role='button' and @title='Browse Server']
+
+CMS.ControlPanel.ResourcesBrowser.link_Folder = //a[contains(.,'%TEXT%')]
+
+
+
+************************************************************
+*** CMS Core Portal Documents and Media Page ***
+************************************************************
+CMS.ControlPanel.DocAndLib.button_Add = //a[@class='nobr']/span[contains(.,'Add')]
+CMS.ControlPanel.DocAndLib.button_Manage = //a[@class='nobr']/span[contains(.,'Manage')]
+CMS.ControlPanel.DocAndLib.button_ListView = //button[@title='List View']
+CMS.ControlPanel.DocAndLib.link_breadcrumb = //div[@class='document-library-breadcrumb']/ul/li/span/a[contains(text(),'%TEXT%')]
+CMS.ControlPanel.DocAndLib.textbox_FolderName = //input[contains(@id,'_name')]
+CMS.ControlPanel.DocAndLib.textarea_Description = //textarea[contains(@id,'_description')]
+CMS.ControlPanel.DocAndLib.button_Save = //input[@value='Save']
+CMS.ControlPanel.DocAndLib.text_Draft = //span[preceding-sibling::span[a[contains(.,'%TEXT%')]] and @class='workflow-status-draft' and contains(text(),'Draft')]
+
+CMS.ControlPanel.DocAndLib.textbox_DocumentFile = //input[following::label[contains(text(),'Title')] and @type='file']
+CMS.ControlPanel.DocAndLib.textbox_DocumentTitle = //input[contains(@id,'_title')]
+CMS.ControlPanel.DocAndLib.button_Publish = //input[@value='Publish']
+
+CMS.ControlPanel.DocAndLib.button_Download = //button[@type='button' and span[text()='Download']]
+CMS.ControlPanel.DocAndLib.button_Edit = //button[@type='button' and span[text()='Edit']]
+CMS.ControlPanel.DocAndLib.button_Move = //button[@type='button' and span[text()='Move']]
+CMS.ControlPanel.DocAndLib.button_Checkout = //button[@type='button' and span[text()='Checkout']]
+CMS.ControlPanel.DocAndLib.button_Checkin = //button[@type='button' and span[text()='Checkin']]
+CMS.ControlPanel.DocAndLib.button_CancelCheckout = //button[@type='button' and span[text()='Cancel Checkout']]
+CMS.ControlPanel.DocAndLib.button_Permissions = //button[@type='button' and span[text()='Permissions']]
+CMS.ControlPanel.DocAndLib.button_Delete = //button[@type='button' and span[text()='Delete']]
+
+CMS.ControlPanel.DocAndLib.text_Vocabulary = //label[contains(text(),'%TEXT%')]
+CMS.ControlPanel.DocAndLib.button_Select = //button[contains(.,'Select') and preceding::label[1][contains(text(),'%TEXT%')]]
+CMS.ControlPanel.DocAndLib.text_Category = //span[@class='aui-textboxlistentry-text' and contains(text(),'%TEXT%')]
+
+CMS.ControlPanel.CategoriesDialog.title_Categories = //div[@role='dialog']/div/div/span[text()='Categories']
+CMS.ControlPanel.CategoriesDialog.weblist_Category = //div[@class='aui-tree-label aui-helper-unselectable' and contains(text(),'%TEXT%')]
+CMS.ControlPanel.CategoriesDialog.button_Close = //button[@id='closethick' and @title='Close dialog']
+
+
+
+************************************************************
+*** CMS Core Portal Tags Page ***
+************************************************************
+CMS.ControlPanel.Tags.button_Actions = //span[@title='Actions']/ul/li/strong/a[@class='nobr' and contains(.,'Actions')]
+CMS.ControlPanel.Tags.button_AddTag = //input[contains(@id,'_addTagButton') and @value='Add Tag']
+CMS.ControlPanel.Tags.button_Permissions = //input[contains(@id,'_tagsPermissionsButton') and @value='Permissions']
+CMS.ControlPanel.Tags.text_TagName = //div[@class='tags-admin-content-wrapper']/span/a[contains(.,'%TEXT%')]
+CMS.ControlPanel.Tags.checkbox_Tag = //input[following-sibling::span[a[contains(.,'%TEXT%')]] and @name='tag-item-check']
+CMS.ControlPanel.Tags.button_Edit = //input[@id='editTagButton' and @value='Edit']
+CMS.ControlPanel.Tags.button_Delete = //input[@id='deleteTagButton' and @value='Delete']
+CMS.ControlPanel.Tags.button_UpdateTagPermissions = //input[@id='updateTagPermissions' and @value='Permissions']
+
+CMS.ControlPanel.AddTagDialog.title_AddTag = //div[@role='dialog']/div/div/span[text()='Add Tag']
+CMS.ControlPanel.AddTagDialog.textbox_TagName = //input[contains(@id,'_name')]
+CMS.ControlPanel.AddTagDialog.button_Save = //input[@value='Save']
+CMS.ControlPanel.AddTagDialog.button_Close = //input[@value='Close']
+
+CMS.ControlPanel.Tags.menuitem_Delete = //a[contains(@id,'_deleteSelectedTags') and @role='menuitem']
+CMS.ControlPanel.Tags.menuitem_Merge = //a[contains(@id,'_mergeSelectedTags') and @role='menuitem']
+
+
+
+************************************************************
+*** CMS Core Portal Categories Page ***
+************************************************************
+CMS.ControlPanel.Categories.button_AddVocabulary = //input[contains(@id,'_addVocabularyButton') and @value='Add Vocabulary']
+CMS.ControlPanel.Categories.button_AddCategory = //input[contains(@id,'_addCategoryButton') and @value='Add Category']
+CMS.ControlPanel.Categories.button_Permissions = //input[contains(@id,'_categoryPermissionsButton') and @value='Permissions']
+CMS.ControlPanel.Categories.menu-button_Actions = //span[contains(.,'Actions')]
+CMS.ControlPanel.Categories.text_VocabularyName = //span[@class='vocabulary-item']/a[text()='%TEXT%']
+CMS.ControlPanel.Categories.text_CategoryName = //div[@class='aui-tree-label aui-helper-unselectable' and text()='%TEXT%']
+
+CMS.ControlPanel.AddVocabularyDialog.title_AddVocabulary = //div[@role='dialog']/div/div/span[text()='Add Vocabulary']
+CMS.ControlPanel.AddVocabularyDialog.textbox_VocabularyName = //input[contains(@id,'_title_en_US')]
+CMS.ControlPanel.AddVocabularyDialog.textarea_VocDescription = //textarea[contains(@id,'_description_en_US')]
+
+CMS.ControlPanel.AddCategoryDialog.title_AddCategory = //div[@role='dialog']/div/div/span[text()='Add Category']
+CMS.ControlPanel.AddCategoryDialog.textbox_CategoryName = //input[contains(@id,'_title_en_US')]
+CMS.ControlPanel.AddCategoryDialog.textarea_CatDescription = //textarea[contains(@id,'_description_en_US')]
+CMS.ControlPanel.AddCategoryDialog.select_Vocabulary = //select[contains(@id,'_vocabularyId')]
+CMS.ControlPanel.AddCategoryDialog.button_Save = //input[@value='Save']
+
+
+
+************************************************************
+*** CMS Core Portal Data Table ***
+************************************************************
+CMS.ControlPanel.datatable.headers = //table[@class='taglib-search-iterator']/tbody/tr[1]/th
+CMS.ControlPanel.datatable.header-name = //table[@class='taglib-search-iterator']/tbody/tr[1]/th/span/a[contains(text(),'Name')]
+CMS.ControlPanel.datatable.header-name_asc = //table[@class='taglib-search-iterator']/tbody/tr[1]/th/span/a[contains(@href,'asc') and contains(text(),'Name')]
+CMS.ControlPanel.datatable.header-name_desc = //table[@class='taglib-search-iterator']/tbody/tr[1]/th/span/a[contains(@href,'desc') and contains(text(),'Name')]
+CMS.ControlPanel.datatable.rows = //table[@class='taglib-search-iterator']/tbody/tr[td/a or ss]
+
+CMS.ControlPanel.datatable.columns = //table[@class='taglib-search-iterator']/tbody/tr[starts-with(@id,'aui')]/td[starts-with(@id,'aui')]
+CMS.ControlPanel.datatable.link-cell_name = //table[@class='taglib-search-iterator']/tbody/tr/td/a[contains(text(),'%TEXT%')]
+CMS.ControlPanel.datatable.span-cell_title = //table[@class='taglib-search-iterator']/tbody/tr/td/span[contains(.,'%TEXT%')]
+CMS.ControlPanel.datatable.link-cell_title = //table[@class='taglib-search-iterator']/tbody/tr/td/span/a[contains(.,'%TEXT%')]
+
+CMS.ControlPanel.datatable.link-cell_status = //table[@class='taglib-search-iterator']//tr[td/a[contains(text(),'%TEXT%')]]/td[preceding-sibling::td/a[contains(text(),'%TEXT%')]][1]/a[contains(text(),'%TEXT%')]
+
+
+
+************************************************************
+*** CMS Core Portal Interactive Messages ***
+************************************************************
+CMS.CorePortal.Messages.success = //div[@class='portlet-msg-success' and contains(text(),'Your request completed successfully.')]
+
+
+
+************************************************************
+*** Component Unit Test ***
+************************************************************
+CMS.UnitTest.getDynamicLocatorType1 = //li[contains(@id,'_userAvatar')]/span/a[contains(text(),'%TEXT%')]
+CMS.UnitTest.getDynamicLocatorType2 = //li[contains(@id,'%TEXT%')]/span/a[contains(text(),'%TEXT%')]
+CMS.UnitTest.getDynamicLocatorType3 = //li[contains(@id,'%TEXT%')]/li[contains(@id,'%TEXT%')]/span/a[contains(text(),'%TEXT%')]
+
+
+
+************************************************************
+************************************************************
+*************************** END ****************************
+************************************************************
+************************************************************
+
+

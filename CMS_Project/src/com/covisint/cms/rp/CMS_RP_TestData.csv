@@ -1,0 +1,2 @@
+TestCaseName,BrowserOS,UseThisData,Remarks,URL,UserName,PassWord,FullName,SiteName,SiteDescription,SiteTemplateName,SiteTemplateDescription,NewSiteName,RemoteIP,RemotePort,RemoteID,PageName,Template,Type,PageTemplateName,TestDataX
+QAtestCMS_3,,True,Login as Administrator,https://portal.int.rnd.covisint.com/home,qatester1,test1234,QA TesterOne,,,,,,,,,,,,,

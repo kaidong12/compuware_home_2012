@@ -1,0 +1,40 @@
+*****************************************************************************
+Locators Format:
+<project name>.<module>.<portlet>.<section>.<control type>_<control name> = <locator>
+
+where
+<project name>: CMS Core Portal
+<module>: Component/Module name the test is being created for - i.e: PAM, IDM
+<porlet>: Portlet name the test is being created for - i.e. login
+<section>: Section within the portlet.  This is optional, 
+		   depends if there is a section within the portlet
+<control type>: Editbox, Checkbox, Label, Link, Combobox, etc
+<control name>: Control name in the application - i.e. SignOn
+<locator>: This is the locator recognized by Selenium IDE.  The locator
+           is a identifier of the application object which Selenium 
+           recognizes during automation playback
+           
+******************************************************************************
+
+
+************************************************************
+************************* CONTENT **************************
+************************************************************
+
+
+************************************************************
+************************* CONTENT **************************
+************************************************************
+
+
+
+
+
+
+
+************************************************************
+************************************************************
+*************************** END ****************************
+************************************************************
+************************************************************
+

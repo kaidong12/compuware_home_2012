@@ -1,0 +1,3 @@
+CREATE TABLE "basicdoc" ("TestCaseName" TEXT NOT NULL  UNIQUE , "BrowserOS" TEXT, "UseThisData" TEXT NOT NULL  DEFAULT True, "Remarks" TEXT NOT NULL,"FileName" TEXT NOT NULL,"DocTitle" TEXT NOT NULL,"DocDescription" TEXT,"ExpirationDate" TEXT,"Tags" TEXT,"Site" TEXT, "Folder" TEXT)
+UPDATE sitepage SET Site= 'Auto_Site_CMS_74_live_1_staging' WHERE Site= 'Auto_CMS74_live_1_staging';
+INSERT INTO "someTable" VALUES ("QAtestCMS_56","*firefox","True","This test case is to verify whether user can add a basic document and publish it via Control Pannel.","basic_document.txt","Auto_BasicDoc_CMS_56_1","Verify whether user can add a basic document and publish it via Control Pannel.","2013-11-11",null,"Auto_Site_CMS_74_live_1_staging","Auto_Folder_CMS_87_1");

@@ -1,0 +1,39 @@
+<suite name="CMS_GENERIC_Test" parallel="false" verbose="10">
+
+<!-- Browser and Execution Settings -->
+	<parameter name="BrowserType" value="FIREFOX"/>
+	<parameter name="baseUrl" value="http://www.google.com"/>
+	<parameter name="commonTestSuite_XMLPath" value="..//CMS_Project/src/com/covisint/cms/Common_TestSuite.xml"/>
+
+<!-- Data File Locations -->
+	<parameter name="Common_TestData" value="..//CMS_Project/TestData/Common_TestData.csv"/>	
+	<parameter name="CMS_RP_TestData" value="..//CMS_Project/src/com/covisint/cms/rp/CMS_RP_TestData.csv"/>
+
+<!-- Locator Files Locations -->
+	<parameter name="CMS_RP_Locators" value="..//CMS_Project/src/com/covisint/cms/rp/CMS_RP_Locators.txt"/>
+	<parameter name="Common_Locators" value="..//CMS_Project/src/com/covisint/cms/Common_Locators.txt"/>
+
+	<test name="CMS_Remote_Publish_Test" preserve-order="true">
+		<classes>
+			<class name="com.covisint.cms.rp.CMS_RP_Test">
+				<methods>
+<!--
+					
+					<include name="Component_Unit_Test"/>
+					<include name="testCMS_81_Publish_via_Site_Pages"/>
+					<include name="testCMS_86_Publish_via_Staging_Menu"/>
+					<include name="testCMS_93_Publish_Pages_Delete_Missing_Pages"/>
+					<include name="testCMS_141_Publish_Pages_Permission_Check_One_page"/>
+					<include name="testCMS_146_Publish_Pages_Permission_Check_Multiple_pages"/>
+					<include name="testCMS_112_Publish_Web_Content"/>
+
+-->
+
+					<include name="testCMS_112_Publish_Web_Content"/>
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,6 @@
+TestCaseName,BrowserOS,UseThisData,Remarks,URL,UserName,PassWord,FullName
+portal_admin,*firefox,True,Login as Portal Administrattor,https://portal.qa.rnd.covisint.com,padmin,shadow10,Portal Admin
+site_admin,*firefox,True,Login as Site Administrattor,https://portal.qa.rnd.covisint.com,lance_administrator,test1234,Lance site administrattor
+site_owner,*firefox,True,Login as Site Owner,https://portal.qa.rnd.covisint.com,lance_owner,test1234,Lance site owner
+site_member,*firefox,True,Login as Site Member,https://portal.qa.rnd.covisint.com,lance_member,test1234,Lance site member
+normal_user,*firefox,True,Login as Site User,https://portal.qa.rnd.covisint.com,lanceyan,test1234,Lance Yan

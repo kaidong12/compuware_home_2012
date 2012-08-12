@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+	<comment>CommonTestSuite</comment>
+
+<!-- Log Width Settings -->
+	<entry key="widthCol1">15</entry>
+	<entry key="widthCol2">10</entry>
+	<entry key="widthCol3">25</entry>
+	<entry key="widthCol4">50</entry>
+
+<!-- VPN Settings -->
+	<entry key="VPNConnector">..//CMS_Project/tool/vpnconnection.exe</entry>
+	<entry key="profileName">Covisint VPN Client</entry>
+	<entry key="userName">schen</entry>
+	<entry key="password">0423</entry>
+	
+<!-- Browser and Execution Settings -->
+	<entry key="DeleteLastResultsBeforeExecution">Yes</entry>
+	<entry key="firefox.profileTemplate">c:\\cms_ff</entry>
+	<entry key="testDataDir">\TestData\</entry>
+	<entry key="testResultsFile">TestResults/Core_Portal_CMS.html</entry>
+	<entry key="CaptureScreenShot">Enable</entry>
+	<entry key="ViewResultsAfterExecution">Enable</entry>
+
+<!-- Database Connection Settings -->
+<!-- sqlite Connection Settings -->
+	<entry key="jdbc.drivers">org.sqlite.JDBC</entry>
+	<entry key="sqlite.connectionstr">jdbc:sqlite:TestData/CMS.sqlite</entry>
+
+<!-- Locator Files Locations -->
+	<entry key="Common_Locators">..//CMS_Project/src/com/covisint/cms/Common_Locators.txt</entry>
+
+<!-- Synchronization Settings -->
+	<entry key="NUMBER_OF_SECONDS_TO_WAIT_FOR_PAGE_TO_LOAD">60</entry>
+	<entry key="NUMBER_OF_SECONDS_TO_WAIT_FOR_ELEMENT_PRESENT">60</entry>
+	<entry key="NUMBER_OF_SECONDS_TO_WAIT_AFTER_ACTION">10</entry>
+	<entry key="NUMBER_OF_SECONDS_TO_WAIT_For_Mail">180</entry>
+
+<!-- Enviroment setup -->
+	<entry key="ENVIRONMENT">QA</entry>
+
+<!-- Testlink Settings -->
+	<entry key="projectName">Blue Cross Blue Shield Association</entry>
+	<entry key="testplanName">BCBSAuto</entry>
+	<entry key="buildName">BCBSABuild001</entry>
+	<entry key="platformName">FireFox10.0</entry>
+	<entry key="ExportResult">NO</entry>	
+	<entry key="devKey">a6b60294f36e112c95a2f8046a920d1c</entry>
+	<entry key="apiUrl">http://192.168.65.26/testlink/lib/api/xmlrpc.php</entry>
+
+</properties>
